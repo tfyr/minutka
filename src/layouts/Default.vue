@@ -6,10 +6,18 @@
                     Турбаза «Минутка»
                 </g-link>
             </div>
-            <div class="working">Работаем круглосуточно</div>
+            <!--div class="working">Работаем круглосуточно</div-->
+            <div class="russia">Россия, Башкортостан</div>
+            <div class="novoabzakovo">с. Новоабзаково</div>
+            <div class="hotline">Горячая линия:</div>
             <div class="phone"><a href="tel:+79088288499">8 908 828-84-99</a></div>
+            <div class="vk">
+                <a href="https://vk.com/abzakovominutka">
+                    <img src="~@/assets/vk.svg">
+                    <span>/abzakovominutka</span>
+                </a>
+            </div>
         </div>
-
 
 
 
@@ -65,11 +73,11 @@
                             Цены и услуги
                         </g-link>
                     </li>
-                    <li>
+                    <!--li>
                         <g-link class="nav__link" to="/rules/">
                             Правила проживания
                         </g-link>
-                    </li>
+                    </li-->
                     <li>
                         <g-link class="nav__link" to="/photos/">
                             Фото-галерея

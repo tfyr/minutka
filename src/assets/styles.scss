@@ -104,20 +104,40 @@ a{
     display: inline-block;
     margin-top: 15px;
     .title{
-        font-size: 25px;
+        font-size: 2.5rem;
         a {
-            color: #000;
+            color: #0000a2;
             text-decoration: none;
         }
     }
     .working{
         font-size: 85%;
     }
+    .russia{
+        margin: 6px 0 -6px;
+    }
     .phone{
-        font-size: 115%;
+        font-size: 1.6rem;
         a {
             color: #000;
             text-decoration: none;
+        }
+    }
+    .hotline{
+        font-size: 1.1rem;
+        margin: 6px 0 -6px;
+    }
+    .vk {
+        img {
+            height: 30px;
+            widht: 30px;
+            vertical-align: middle;
+        }
+        a {
+            text-decoration: none;
+        }
+        span{
+            margin-left: 4px;
         }
     }
 }
