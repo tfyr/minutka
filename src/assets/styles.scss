@@ -19,69 +19,8 @@ body {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
-    min-height: 760px;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    a {
-        text-decoration: none;
-    }
-    ul{
-        padding-left: 0;
-        margin-left: -6px;
-        li {
-            display: inline;
-            padding: 6px;
-            transition: background 1.5s ease;
-            &:before{
-                content: none;
-            }
-            &:hover{
-                color: #0e0e0e;
-                background: #fff;
-                transition: background 1.5s ease;
-            }
-        }
-        .active--exact {
-            border-bottom: 3px solid #004679;
-        }
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    .header {
-        background: #fff;
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background-image: url(~@/assets/images/background.jpg);
-        background-size: cover;
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;            
-        ul{
-            padding-left: 15px;
-            margin-left: 0;
-            list-style-type: none;
-            li{
-                display: block;
-                &:before{
-                    content: '—';
-                }
-            }
-            .active--exact{
-                border-bottom: none;
-            }
-        }
-    }
-}
 
 .nav__link {
 }
@@ -104,10 +43,13 @@ a{
     display: inline-block;
     margin-top: 15px;
     .title{
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         a {
-            color: #0000a2;
             text-decoration: none;
+        }
+        span.minutka{
+            font-family: Serif;
+            font-size: 1.15em;
         }
     }
     .working{

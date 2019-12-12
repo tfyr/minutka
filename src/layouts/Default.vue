@@ -1,9 +1,10 @@
 <template>
+    <div>
     <div class="layout">
         <div class="logo">
             <div class="title">
                 <g-link class="nav__link" to="/">
-                    Турбаза «Минутка»
+                    Турбаза <span class="minutka">"Минутка"</span>
                 </g-link>
             </div>
             <!--div class="working">Работаем круглосуточно</div-->
@@ -50,7 +51,7 @@
 
 
         <header class="header" :class="{'hideMenu': !isMenuOpened}">
-            <!--g-link to="/">{{ $static.metadata.siteName }}</g-link-->
+            <!--g-link to="/">{{ $static.metadata.siteName }}</g-link-->  
             <nav class="nav" style="white-space: normal;">
                 <ul>
                     <li>
@@ -86,7 +87,8 @@
                 </ul>
             </nav>
         </header>
-        <slot/>
+    </div>
+    <slot/>
     </div>
 </template>
 
@@ -123,7 +125,37 @@
     @media screen and (max-width: 768px) {
         header.header{
             display: block;
+            background: #fff;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-image: url(~@/assets/images/background.jpg);
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;            
+            ul{
+                padding-left: 15px;
+                margin-left: 0;
+                list-style-type: none;
+                li{
+                    display: block;
+                    &:before{
+                        content: '—';
+                    }
+                    a{
+                        padding: 10px;
+                    }
+                }
+                .active--exact{
+                    border-bottom: none;
+                    background: none !important;
+                }
+            }
         }
+
         .hideMenu{
             display: none !important;
         }
@@ -134,4 +166,56 @@
             top: 5px;
         }
     }
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+        background: rgba(255,255,255,.85);
+        margin-top: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        display: inline-block;
+    }
+    ul{
+        padding-left: 0;
+        margin: 0;
+        li {
+            display: inline;
+            padding: 0;
+            &:before{
+                content: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        a{
+            padding: 16px 6px;            
+            transition: background 1.5s ease;
+            &:hover{
+                color: #0e0e0e;
+                background: #a8cefd;
+                transition: background 1.5s ease;
+            }
+        }
+        .active--exact {
+            /*border-bottom: 3px solid #004679;*/
+            background: #c0dcff;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+}
+
 </style>
