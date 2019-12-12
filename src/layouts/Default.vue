@@ -84,6 +84,11 @@
                             Фото-галерея
                         </g-link>
                     </li>
+                    <li>
+                        <g-link class="nav__link" to="/reviews/">
+                            Отзывы
+                        </g-link>
+                    </li>
                 </ul>
             </nav>
         </header>
