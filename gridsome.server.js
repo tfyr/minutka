@@ -5,7 +5,7 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-const posts = require('./src/assets/album1.json')
+//const posts = require('./src/assets/album1.json')
 
 module.exports = function (api) {
     api.loadSource(({ addCollection }) => {
@@ -17,7 +17,7 @@ module.exports = function (api) {
 	})
 
 
-	api.loadSource(store => {
+	/*api.loadSource(store => {
 	    const contentType = store.addContentType({
 	        typeName: 'Posts'
 	    })
@@ -29,5 +29,5 @@ module.exports = function (api) {
 	        	href: item.href
 	        })
 	    }
-	})  
+	})*/  
 }

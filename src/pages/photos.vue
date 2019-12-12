@@ -4,13 +4,20 @@
             <h1>Фото-галерея</h1>
             <!--div>{{ album1 }}</div>
             <div>1 {{ $page.allPost.edges }} 2</div-->
-            <div style="width: 100%">
+
+            <h3>Домики и номера</h3>
             <ul class="photos">
-                <li v-for="edge in $page.allPost.edges" :key="edge.node.id">
+                <li v-for="edge in $page.base.edges" :key="edge.node.id">
                     <g-image alt="image" :src="edge.node.image" />
                 </li>
             </ul>
-            </div>
+
+            <h3>Природа</h3>
+            <ul class="photos">
+                <li v-for="edge in $page.nature.edges" :key="edge.node.id">
+                    <g-image alt="image" :src="edge.node.image" />
+                </li>
+            </ul>
 
             <!--form method="POST" action="https://minutka.herokuapp.com/v2/entry/tfyr/minutka/gh-pages/comments">
                 <input name="options[redirect]" type="hidden" value="https://my-site.com">
@@ -26,7 +33,16 @@
 
 <page-query>
     query{
-        allPost {
+        base: allPost(sortBy: "title", order: ASC, filter: { album: { in: ["base"] }}) {
+            edges {
+                node {
+                    id
+                    path
+                    image (width: 420, height: 200, quality: 90, fit: inside)
+                }
+            }
+        }
+        nature: allPost(sortBy: "title", order: ASC, filter: { album: { in: ["nature"] }}) {
             edges {
                 node {
                     id
