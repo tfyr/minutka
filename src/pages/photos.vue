@@ -8,7 +8,7 @@
             <h3>Домики и номера</h3>
             <ul class="photos">
                 <li v-for="edge in $page.base.edges" :key="edge.node.id">
-                    <g-image alt="image" :src="edge.node.image" />
+                    <g-image alt="image" :src="edge.node.image"/>
                 </li>
             </ul>
 
@@ -38,7 +38,7 @@
                 node {
                     id
                     path
-                    image (width: 420, height: 200, quality: 90, fit: inside)
+                    image
                 }
             }
         }
@@ -47,7 +47,7 @@
                 node {
                     id
                     path
-                    image (width: 420, height: 200, quality: 90, fit: inside)
+                    image #(width: 420, height: 200, quality: 90, fit: inside)
                 }
             }
         }
@@ -55,10 +55,22 @@
 </page-query>
 
 <script>
+
     //import album1 from '@/assets/album1.yaml'
+    import mediumZoom from 'medium-zoom'
+
     export default {
         metaInfo: {
             title: 'Фото-галерея'
+        },
+        mounted() {
+            mediumZoom(
+                '.photos img', 
+                {
+                    margin: 24,
+                    background: '#333'
+                }
+            )
         },
         /*data(){
             return {
@@ -85,6 +97,8 @@
         }
         img {
             margin: .5rem;
+            height: 200px;
+            width: auto;
         }
     }
 </style>
