@@ -68,7 +68,7 @@
                 '.photos img', 
                 {
                     margin: 24,
-                    background: '#333'
+                    background: "rgba(0,0,0,.92)"
                 }
             )
         },
