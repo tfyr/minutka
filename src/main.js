@@ -4,5 +4,7 @@ import '~/assets/styles.scss'
 import DefaultLayout from '~/layouts/Default.vue'
 
 export default function (Vue, { router, head, isClient }) {
+	head.htmlAttrs = { lang: 'ru' }
+
     Vue.component('Layout', DefaultLayout)
 }

@@ -11,25 +11,36 @@ module.exports = {
     templates: {
         Post: '/:title',
         //Tag: '/tag/:id'
-      },
+    },
 
     plugins: [
         {
-          // Create posts from markdown files
-          use: '@gridsome/source-filesystem',
-          options: {
-            typeName: 'Post',
-            //path: 'content/posts/*.json',
-            path: 'content/posts/*.md',
-            /*refs: {
-              // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
-              tags: {
-                typeName: 'Tag',
-                create: true
-              }
-            }*/
-          }
-        }
+            // Create posts from markdown files
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Post',
+                //path: 'content/posts/*.json',
+                path: 'content/posts/*.md',
+                /*refs: {
+                    // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
+                    tags: {
+                        typeName: 'Tag',
+                        create: true
+                    }
+                }*/
+            }
+        },
+        {
+            use: '@gridsome/source-graphql',
+            options: {
+                url: process.env['MINUTKA_WORKSPACE_ENDPOINT'],
+                fieldName: 'minutka',
+                typeName: 'minutka',
+                //headers: {
+                //    Authorization: `Bearer ${process.env['MINUTKA_API_TOKEN']}`,
+                //},
+            },
+        },
     ],
     transformers: {
         //Add markdown support to all file-system sources
