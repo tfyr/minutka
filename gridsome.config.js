@@ -41,6 +41,14 @@ module.exports = {
                 //},
             },
         },
+	    {
+	        use: 'gridsome-plugin-gtm',
+	        options: {
+	      		id: 'GTM-NP5QGSC',
+	        	enabled: true,
+	        	debug: true
+	        }
+	    },
     ],
     transformers: {
         //Add markdown support to all file-system sources

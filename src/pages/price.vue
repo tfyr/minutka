@@ -4,8 +4,10 @@
             <h1>Цены и услуги</h1>
             <div class="white-bg">
                 <div class="photo-text">
-                    <g-image src="~/assets/images/photo1.jpg" width="240"/>
                     <div>
+                        <g-image src="~/assets/images/photo1.jpg" width="240"/>
+                    </div>
+                    <div class="descr">
                         <h3>Отдых на 1 день</h3>
                         <ul>
                             <li>от 200р/чел.</li>
@@ -16,8 +18,10 @@
                 </div>
 
                 <div class="photo-text">
-                    <g-image src="~/assets/images/photo2.jpg" width="240" />
                     <div>
+                        <g-image src="~/assets/images/photo2.jpg" width="240" />
+                    </div>
+                    <div class="descr">
                         <h3>Дом для гостей Минутка Абзаково.</h3>
                         <ul>
                             <li>Состоит из двух половин для компаний 12 чел. или для одной компании 24 чел.</li>
@@ -35,8 +39,10 @@
                 </div-->
          
                 <div class="photo-text">
-                    <g-image src="~/assets/images/bath.jpg" width="240" />
                     <div>
+                        <g-image src="~/assets/images/bath.jpg" width="240" />
+                    </div>
+                    <div class="descr">
                         <h3>Банька на дровах</h3>
                         <ul>
                             <li>1000р/2ч</li>
@@ -67,7 +73,7 @@
             flex-direction: column;
         }
         @media screen and (min-width: 768px) {
-            div {
+            div.descr {
                 margin-left: 15px;
             }
         }
