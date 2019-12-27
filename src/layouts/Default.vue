@@ -4,7 +4,7 @@
             <div class="logo">
                 <div class="title">
                     <g-link class="nav__link" to="/">
-                        Турбаза <span class="minutka">"Минутка"</span>
+                        Турбаза <span class="minutka">«Минутка»</span>
                     </g-link>
                 </div>
                 <!--div class="working">Работаем круглосуточно</div-->
@@ -52,7 +52,7 @@
                     <ul>
                         <li>
                             <g-link class="nav__link" to="/">
-                                Начало
+                                Главная
                             </g-link>
                         </li>
                         <li>

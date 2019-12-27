@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Cuprum|Open+Sans&display=swap&subset=cyrillic');
 
+html{
+    height: 100%;
+}
+
 body {
     font-family: 'Cuprum', sans-serif;
     font-size: 20px;
@@ -48,7 +52,7 @@ a{
             text-decoration: none;
         }
         span.minutka{
-            font-family: Serif;
+            /*font-family: Serif;*/
             font-size: 1.15em;
         }
     }
