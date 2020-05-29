@@ -5,7 +5,7 @@
             <div class="white-bg">
                 <div class="photo-text">
                     <div>
-                        <g-image src="~/assets/images/photo1.jpg" width="240"/>
+                        <g-image src="~/assets/images/photo1.jpg"/>
                     </div>
                     <div class="descr">
                         <h3>Отдых на 1 день</h3>
@@ -19,7 +19,7 @@
 
                 <div class="photo-text">
                     <div>
-                        <g-image src="~/assets/images/photo2.jpg" width="240" />
+                        <g-image src="~/assets/images/photo2.jpg" />
                     </div>
                     <div class="descr">
                         <h3>Дом для гостей Минутка Абзаково.</h3>
@@ -40,7 +40,7 @@
          
                 <div class="photo-text">
                     <div>
-                        <g-image src="~/assets/images/bath.jpg" width="240" />
+                        <g-image src="~/assets/images/bath.jpg" />
                     </div>
                     <div class="descr">
                         <h3>Банька на дровах</h3>
@@ -59,10 +59,20 @@
 </template>
 
 <script>
+    import mediumZoom from 'medium-zoom'
     export default {
         metaInfo: {
             title: 'Контакты'
-        }
+        },
+        mounted() {
+            mediumZoom(
+                '.photo-text img', 
+                {
+                    margin: 24,
+                    background: "rgba(0,0,0,.92)"
+                }
+            )
+        },
     }
 </script>
 
@@ -80,6 +90,9 @@
         margin-bottom: 2rem;
         h3 {
             margin-top: 0;
+        }
+        img {
+            width: 240px;
         }
         ul{
             padding-left: 0;
